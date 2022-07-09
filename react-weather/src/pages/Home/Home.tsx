@@ -1,5 +1,6 @@
 import React from "react";
-import ThisDay from "../MonthStatistics/components/ThisDay/ThisDay";
+import ThisDay from "./components/ThisDay/ThisDay";
+import { ThisDayInfo } from "./components/ThisDayInfo/ThisDayInfo";
 
 import s from "./Home.module.scss";
 type Props = {};
@@ -7,7 +8,10 @@ type Props = {};
 const Home = (props: Props) => {
   return (
     <div className={s.home}>
-      <ThisDay />
+      <div className={s.wrapper}>
+        <ThisDay />
+        <ThisDayInfo />
+      </div>
     </div>
   );
 };

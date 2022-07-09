@@ -5,7 +5,7 @@ type Props = {};
 
 const ThisDay = (props: Props) => {
   return (
-    <header className={s.this__day}>
+    <div className={s.this__day}>
       <div className={s.top__block}>
         <div className="s.top__block__wrapper">
           <div className={s.this__temp}>20°</div>
@@ -21,7 +21,7 @@ const ThisDay = (props: Props) => {
           Город <span>Киев</span>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 
