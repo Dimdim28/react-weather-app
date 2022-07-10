@@ -32,30 +32,31 @@ const Popup = (props: Props) => {
 
   return (
     <>
-      <div className={s.blur}></div>
-      <div className={s.popup}>
-        <div className={s.day}>
-          <div className={s.day__temp}>12°</div>
-          <div className={s.day__name}>Среда</div>
-          <div className={s.img}>
-            <GlobalSvgSelector id="sun" />
+      <div className={s.blur}>
+        <div className={s.popup}>
+          <div className={s.day}>
+            <div className={s.day__temp}>12°</div>
+            <div className={s.day__name}>Среда</div>
+            <div className={s.img}>
+              <GlobalSvgSelector id="sun" />
+            </div>
+            <div className={s.day__time}>
+              Время <span>21:54</span>
+            </div>
+            <div className={s.day__city}>
+              Город <span>Киев</span>
+            </div>
           </div>
-          <div className={s.day__time}>
-            Время <span>21:54</span>
+          <div className={s.this__day_info}>
+            <div className={s.this__day_info_items}>
+              {items.map((item: Item) => (
+                <ThisDayItem key={item.icon_id} item={item} />
+              ))}
+            </div>
           </div>
-          <div className={s.day__city}>
-            Город <span>Киев</span>
+          <div className={s.close}>
+            <GlobalSvgSelector id="close" />
           </div>
-        </div>
-        <div className={s.this__day_info}>
-          <div className={s.this__day_info_items}>
-            {items.map((item: Item) => (
-              <ThisDayItem key={item.icon_id} item={item} />
-            ))}
-          </div>
-        </div>
-        <div className={s.close}>
-          <GlobalSvgSelector id="close" />
         </div>
       </div>
     </>

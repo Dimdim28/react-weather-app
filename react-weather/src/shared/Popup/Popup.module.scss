@@ -1,25 +1,25 @@
 @import "../../styles/variables.scss";
 
 .popup {
-  position: absolute;
-  top: 50%;
-  left: calc(50% - 325px);
   max-width: 750px;
-  z-index: 1001;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 40px;
-  background: $lite-background;
+  background: $light-background;
   box-shadow: $box-shadow;
   border-radius: $border-radius;
+  position: relative;
 }
 
 .blur {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   z-index: 1000;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.25);
 }
