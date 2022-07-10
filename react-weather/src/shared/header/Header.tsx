@@ -14,11 +14,13 @@ const Header = (props: Props) => {
     { value: "city-3", label: "Днепр" },
   ];
 
+  const back =
+    theme.theme === Theme.DARK ? "#4F4F4F" : "rgba(71, 147, 255, 0.2)";
+
   const colorStyles = {
     control: (styles: any) => ({
       ...styles,
-      backgroundColor:
-        theme.theme === Theme.DARK ? "#4F4F4F" : "rgba(71, 147, 255, 0.2)",
+      backgroundColor: back,
       width: "194px",
       height: "37px",
       border: "none",
@@ -28,8 +30,7 @@ const Header = (props: Props) => {
     option: (styles: any) => {
       return {
         ...styles,
-        backgroundColor:
-          theme.theme === Theme.DARK ? "#4F4F4F" : "rgba(71, 147, 255, 0.2)",
+        backgroundColor: back,
         ":active": {
           ...styles[":active"],
           backgroundColor: "#4793ff",
